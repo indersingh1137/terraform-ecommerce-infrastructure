@@ -16,7 +16,7 @@ provider "aws" {
 
 # 3. Resource Configuration
 resource "aws_s3_bucket" "product_assets" {
-  bucket = "ecommerce-dev-product-assets-inder"
+  bucket = local.bucket_name
   tags = {
     Environment = "dev"
     Purpose     = "product-assets"
